@@ -40,6 +40,7 @@ export default function Map({
   }
 
   useEffect(() => {
+    // unmount시
     return () => {
       mapRef.current?.destroy()
     }
