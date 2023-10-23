@@ -11,7 +11,7 @@ type Props = {
   onLoad?: (map: NaverMap) => void
 }
 
-export default function Map({
+export default function MapSection({
   mapId = 'map',
   initialCenter = INITIAL_CENTER,
   initialZoom = INITIAL_ZOOM,
@@ -33,6 +33,14 @@ export default function Map({
 
     const map = new window.naver.maps.Map(mapId, mapOptions)
     mapRef.current = map
+
+    // 원하는 위치 마커 찍기
+    new naver.maps.Marker({
+      position: new naver.maps.LatLng(37.50948837278171, 127.03812595602298),
+      map: map,
+    })
+
+    // 현재 위치 가져오기
 
     if (onLoad) {
       onLoad(map)
