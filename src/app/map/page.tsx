@@ -1,12 +1,14 @@
 'use client'
-import Map from '../components/Map'
+import MapSection from '../components/Map'
 
 export default function MapPage() {
   return (
-    <Map
-      onLoad={() => {
-        console.log('load!')
-      }}
-    />
+    <>
+      <MapSection
+        onLoad={() => {
+          console.log('load!')
+        }}
+      />
+    </>
   )
 }
