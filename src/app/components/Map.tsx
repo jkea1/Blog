@@ -42,6 +42,7 @@ export default function MapSection({
 
     // 현재 위치 가져오기
 
+
     if (onLoad) {
       onLoad(map)
     }
